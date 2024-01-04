@@ -1,53 +1,81 @@
-/* This section is styling the homepage headline */
-.custom-bold-text {
-    font-weight: bold;
-}
+/* sizes in large screens  --- smol screens
+   navbar - fs:25px  
+   buttons - fs:20px
+   h1 - 50px  -- 47 px
+   h2 - 33px  -- 29 px
+   h3 - 27px  -- 24px
+   h4 - 24px  -- 22px
+   p -  18px  -- 16px
+*/
 
-.custom-text h4 {
-    font-weight: normal;
+/* common styles for custom fonts  */
+#custom-h1 {
+    font-size: 50px;
 }
 
 .custom-text h3 {
     font-weight: normal;
+    font-size: 27px;
 }
+
+/* for p */
+#custom-texts {
+    font-size: 18px;
+}
+
+/* for h2 */
+.custom-text {
+    font-size: 33px;
+}
+
+/* for h4 card title */
+.card-title {
+    font-size: 24px;
+}
+
+
+
 
 /* Custom styles for navigation */
 .navbar-nav .nav-link {
-    margin-right: 15px;
-    font-size: 20px;
+    margin-right: 25px;
+    font-size: 23px;
     font-weight: bold;
     transition: transform 0.3s ease-in-out;
     /* Smooth transition for color change */
 }
 
 .navbar-nav .nav-link:hover {
-    color: #333;
-    /* Change color on hover */
-    transform: scale(1.1);
-    /* Scale effect on hover */
+    color: white; /* Change color on hover */
+    transform: scale(1.1); /* Scale effect on hover */
 }
 
 /* Uniform Format for buttons */
 .custom-button {
     transition: transform 0.5s ease-in-out;
     color: #fff;
-    /* Set default text color */
-    background-color: #007bff;
-    /* Set default button color */
-    border-color: #007bff;
-    /* Set default border color */
+    background-color:#1E3163;
+    border-color: #1E3163;
+}
+
+#custom-btns.custom-button {
+    font-size: 20px;
 }
 
 /* Hover effect to enlarge the buttons */
 .custom-button:hover {
     transform: scale(1.1);
-    color: #007bff;
-    /* Change text color on hover */
-    background-color: #fff;
-    /* Change button background color on hover */
-    border-color: #007bff;
-    /* Change border color on hover */
+    color: #1E3163; /* Change text color on hover */
+    background-color: #fff; /* Change button background color on hover */
+    border-color: #1E3163; /* Change border color on hover */
 }
+
+.custom-button:active {
+    background-color: #1E3163 !important;
+    border-color: #1E3163;
+    background-color: #fff;
+}
+
 
 /* Custom styles for education details and background*/
 .education-details {
@@ -128,24 +156,35 @@
 }
 
 
-/* for navlink in sidebar */
-.navbar-nav .nav-link {
-    margin-right: 15px;
-    font-size: 20px;
-    font-weight: bold;
-    transition: transform 0.3s ease-in-out;
-    /* Smooth transition for color change */
-}
-
-.navbar-nav .nav-link:hover {
-    color: rgb(15, 15, 15);
-    /* Change color on hover */
-    /* Scale effect on hover */
-}
-
-
-/* Homepage custom style for mobile resolution */
+/*  for SMALL RESOLUTION 0px to 767px*/
 @media (max-width: 767px) {
+
+    /* common styles for custom fonts  */
+    #custom-h1 {
+        font-size: 45px;
+    }
+
+    .custom-text h3 {
+        font-weight: normal;
+        font-size: 19px;
+    }
+
+    /* for p */
+    #custom-texts {
+        font-size: 15px;
+    }
+
+    /* for h2 */
+    .custom-text {
+        font-size: 27px;
+    }
+
+
+    /* for h4 card title */
+    .card-title {
+        font-size: 20px;
+    }
+
     .custom-button {
         width: 70%;
         margin-left: auto;
@@ -153,12 +192,12 @@
         display: block;
     }
 
-    .custom-text {
-        text-align: center;
+    #custom-btns.custom-button {
+        font-size: 18px;
     }
 
-    .custom-text h3 {
-        margin-top: 20px;
+    .custom-text {
+        text-align: center;
     }
 
     .skill {
@@ -172,10 +211,39 @@
 
 }
 
+/* to continue investigate why dili ma center ang CTA bsta low screen reso */
 
 
+/* FOR MEDIUM SCREENS 768px to 991px */
+@media (max-width: 991px) {
 
-@media (max-width: 992px) {
+    /* common styles for custom fonts  */
+    #custom-h1 {
+        font-size: 47px;
+    }
+
+    .custom-text h3 {
+        font-weight: normal;
+        font-size: 23px;
+    }
+
+    /* for p */
+    #custom-texts {
+        font-size: 16px;
+    }
+
+    /* for h2 */
+    .custom-text {
+        font-size: 29px;
+    }
+
+
+    /* for h4 card title */
+    .card-title {
+        font-size: 22px;
+    }
+
+
     .custom-button {
         width: 80%;
         margin-left: auto;
@@ -183,12 +251,8 @@
         display: block;
     }
 
-    .custom-text {
-        text-align: center;
-    }
-
-    .custom-text h3 {
-        margin-top: 20px;
+    #custom-btns.custom-button {
+        font-size: 18px;
     }
 
     .skill {
@@ -198,7 +262,7 @@
         display: block;
     }
 
-    /* for sidebar */
+    /* for sidebar --FOR LOW AND MEDIUM */
     .sidebar {
         position: fixed;
         top: 0;
@@ -250,9 +314,9 @@
     }
 
     .navbar-nav .nav-link:hover {
-        color: rgb(230, 228, 228);
-        /* Change color on hover */
-        /* Scale effect on hover */
+        color: white;
+        transform: scale(1.0);
+
     }
 
     /* NAVBAR customization - removing the box */
@@ -260,21 +324,15 @@
         padding: 0;
         /* Remove any padding that might affect the button size */
         border: none !important;
-        /* Remove any border */
         background-color: transparent !important;
-        /* Set background to transparent */
         outline: none;
-        /* Remove outline */
     }
 
     /* Remove the border and background for inner elements creating the icon appearance */
     .navbar-toggler .navbar-toggler-icon {
         border: none !important;
-        /* Remove any border */
         background-color: transparent !important;
-        /* Set background to transparent */
         outline: none;
-        /* Remove outline */
     }
 
     /* Remove focus and active states for the toggler */
@@ -286,6 +344,21 @@
 
 }
 
+/* For LARGE SCREENS  992px to 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .custom-button {
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+        display: inline;
+    }
+
+    #custom-btns.custom-button {
+        font-size: 18px;
+    }
+
+}
 
 
 /* Footer styles */
@@ -481,4 +554,60 @@
     transform: rotate(-45deg);
     top: 21px;
     left: 8px;
+}
+
+
+
+
+/* SITE COLOR SETUP
+/* SITE COLOR SETUP
+/* SITE COLOR SETUP
+CCD5AE
+E9EDC9
+FEFAE0
+FAEDCD
+D4A373
+*/
+
+/*  COLOR FOR HEADER  */
+.custom-navbar-bg {
+    background-color: #CCD5AE;
+}
+
+.navbar-collapse {
+    background-color: #CCD5AE;
+}
+
+.navbar-nav {
+    background-color: #CCD5AE;
+}
+
+.navbar-toggler {
+    background-color: #CCD5AE;
+}
+
+/* COLOR FOR FOOTER */
+
+.custom-footer-bg {
+    background-color: #D4A373;
+}
+
+.custom-footer-text {
+    color: black !important;
+}
+
+/* COLOR FOR CTA BANNER  */
+
+.custom-cta-bg {
+    background-color: #E9EDC9 !important;
+}
+
+.custom-body-bg {
+    background-color: #FEFAE0 !important;
+}
+
+/* IMAGE BLENDING EDGES */
+
+.style-softedge {
+    mix-blend-mode: multiply;
 }
