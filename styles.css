@@ -10,375 +10,354 @@
 
 /* common styles for custom fonts  */
 #custom-h1 {
-    font-size: 50px;
+  font-size: 50px;
+  color: #8e82fe;
 }
 
 .custom-text h3 {
-    font-weight: normal;
-    font-size: 27px;
+  font-weight: normal;
+  font-size: 27px;
 }
 
 /* for p */
 #custom-texts {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 /* for h2 */
 .custom-text {
-    font-size: 33px;
+  font-size: 33px;
 }
 
 /* for h4 card title */
 .card-title {
-    font-size: 24px;
+  font-size: 24px;
 }
-
-
-
 
 /* Custom styles for navigation */
 .navbar-nav .nav-link {
-    margin-right: 25px;
-    font-size: 23px;
-    font-weight: bold;
-    transition: transform 0.3s ease-in-out;
-    /* Smooth transition for color change */
+  margin-right: 25px;
+  font-size: 23px;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out;
+  /* Smooth transition for color change */
 }
 
 .navbar-nav .nav-link:hover {
-    color: white; /* Change color on hover */
-    transform: scale(1.1); /* Scale effect on hover */
+  color: white; /* Change color on hover */
+  transform: scale(1.1); /* Scale effect on hover */
 }
 
 /* Uniform Format for buttons */
 .custom-button {
-    transition: transform 0.5s ease-in-out;
-    color: #fff;
-    background-color:#1E3163;
-    border-color: #1E3163;
+  transition: transform 0.5s ease-in-out;
+  color: #fff;
+  background-color: #1e3163;
+  border-color: #1e3163;
 }
 
 #custom-btns.custom-button {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 /* Hover effect to enlarge the buttons */
 .custom-button:hover {
-    transform: scale(1.1);
-    color: #1E3163; /* Change text color on hover */
-    background-color: #fff; /* Change button background color on hover */
-    border-color: #1E3163; /* Change border color on hover */
+  transform: scale(1.1);
+  color: #1e3163; /* Change text color on hover */
+  background-color: #fff; /* Change button background color on hover */
+  border-color: #1e3163; /* Change border color on hover */
 }
 
 .custom-button:active {
-    background-color: #1E3163 !important;
-    border-color: #1E3163;
-    background-color: #fff;
+  background-color: #1e3163 !important;
+  border-color: #1e3163;
+  background-color: #fff;
 }
-
 
 /* Custom styles for education details and background*/
 .education-details {
-    font-size: 16px;
-    /* Adjust font size */
-    font-weight: 500;
-    /* Adjust font weight */
-    line-height: 1.6;
-    /* Adjust line height */
+  font-size: 16px;
+  /* Adjust font size */
+  font-weight: 500;
+  /* Adjust font weight */
+  line-height: 1.6;
+  /* Adjust line height */
 }
 
 /* icons in highlight section */
 .card-icons {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
 }
 
 /* cards animation to scale in hover*/
 .card {
-    transition: transform 0.3s ease;
-    cursor: default;
+  transition: transform 0.3s ease;
+  cursor: default;
 }
 
 .card:hover {
-    transform: scale(1.1);
-    /* Adjust the scale factor as needed */
+  transform: scale(1.1);
+  /* Adjust the scale factor as needed */
 }
 
 .card:hover .card-title {
-    color: blue;
-    /* Change to the desired color */
+  color: blue;
+  /* Change to the desired color */
 }
 
 /* for progress bar style */
 
 .skills-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .skill {
-    margin-bottom: 20px;
-    width: 100%;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .progress {
-    position: relative;
-    height: 30px;
+  position: relative;
+  height: 30px;
 }
 
 .percentage {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: black;
-    z-index: 1;
-    /* Ensures the text is on top of the progress bar */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  z-index: 1;
+  /* Ensures the text is on top of the progress bar */
 }
 
 /* CSS for progress bar */
 .progress-bar {
-    background: linear-gradient(to right,
-            #A1CF6B 0%,
-            #A1CF6B 100%
-            /* Green: 81-100% */
-        );
-    border-radius: 5px;
+  background: linear-gradient(
+    to right,
+    #a1cf6b 0%,
+    #a1cf6b 100% /* Green: 81-100% */
+  );
+  border-radius: 5px;
 }
 
 .skill p {
-    margin-bottom: 5px;
-    /* Add margin below each text */
-    font-weight: bold;
-    /* Make the skills bold */
+  margin-bottom: 5px;
+  /* Add margin below each text */
+  font-weight: bold;
+  /* Make the skills bold */
 }
-
 
 /*  for SMALL RESOLUTION 0px to 767px*/
 @media (max-width: 767px) {
+  /* common styles for custom fonts  */
+  #custom-h1 {
+    font-size: 45px;
+  }
 
-    /* common styles for custom fonts  */
-    #custom-h1 {
-        font-size: 45px;
-    }
+  .custom-text h3 {
+    font-weight: normal;
+    font-size: 19px;
+  }
 
-    .custom-text h3 {
-        font-weight: normal;
-        font-size: 19px;
-    }
+  /* for p */
+  #custom-texts {
+    font-size: 15px;
+  }
 
-    /* for p */
-    #custom-texts {
-        font-size: 15px;
-    }
+  /* for h2 */
+  .custom-text {
+    font-size: 27px;
+  }
 
-    /* for h2 */
-    .custom-text {
-        font-size: 27px;
-    }
+  /* for h4 card title */
+  .card-title {
+    font-size: 20px;
+  }
 
+  .custom-button {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 
-    /* for h4 card title */
-    .card-title {
-        font-size: 20px;
-    }
+  #custom-btns.custom-button {
+    font-size: 18px;
+  }
 
-    .custom-button {
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
+  .custom-text {
+    text-align: center;
+  }
 
-    #custom-btns.custom-button {
-        font-size: 18px;
-    }
-
-    .custom-text {
-        text-align: center;
-    }
-
-    .skill {
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-
-
-
+  .skill {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 }
 
 /* to continue investigate why dili ma center ang CTA bsta low screen reso */
 
-
 /* FOR MEDIUM SCREENS 768px to 991px */
 @media (max-width: 991px) {
+  /* common styles for custom fonts  */
+  #custom-h1 {
+    font-size: 47px;
+  }
 
-    /* common styles for custom fonts  */
-    #custom-h1 {
-        font-size: 47px;
-    }
+  .custom-text h3 {
+    font-weight: normal;
+    font-size: 23px;
+  }
 
-    .custom-text h3 {
-        font-weight: normal;
-        font-size: 23px;
-    }
+  /* for p */
+  #custom-texts {
+    font-size: 16px;
+  }
 
-    /* for p */
-    #custom-texts {
-        font-size: 16px;
-    }
+  /* for h2 */
+  .custom-text {
+    font-size: 29px;
+  }
 
-    /* for h2 */
-    .custom-text {
-        font-size: 29px;
-    }
+  /* for h4 card title */
+  .card-title {
+    font-size: 22px;
+  }
 
+  .custom-button {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 
-    /* for h4 card title */
-    .card-title {
-        font-size: 22px;
-    }
+  #custom-btns.custom-button {
+    font-size: 18px;
+  }
 
+  .skill {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 
-    .custom-button {
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
+  /* for sidebar --FOR LOW AND MEDIUM */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -40%;
+    /* Initially off the screen */
+    width: 40%;
+    height: 100vh;
+    background-color: #bdbebe;
+    /* Set your desired color */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    /* Adding shadow */
+    transition: all 0.3s ease;
+    z-index: 999;
+    /* Ensure sidebar appears above other content */
+  }
 
-    #custom-btns.custom-button {
-        font-size: 18px;
-    }
+  .sidebar.show {
+    left: 0;
+    /* Display the sidebar */
+  }
 
-    .skill {
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
+  /* Adding overlay effect to the main content when sidebar is open */
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black */
+    z-index: 998;
+    /* Below the sidebar */
+    display: none;
+    /* Initially hidden */
+  }
 
-    /* for sidebar --FOR LOW AND MEDIUM */
-    .sidebar {
-        position: fixed;
-        top: 0;
-        left: -40%;
-        /* Initially off the screen */
-        width: 40%;
-        height: 100vh;
-        background-color: #bdbebe;
-        /* Set your desired color */
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-        /* Adding shadow */
-        transition: all 0.3s ease;
-        z-index: 999;
-        /* Ensure sidebar appears above other content */
-    }
+  .sidebar.show + .sidebar-overlay {
+    display: block;
+    /* Show the overlay when sidebar is open */
+  }
 
-    .sidebar.show {
-        left: 0;
-        /* Display the sidebar */
-    }
+  /* for navlink in sidebar */
+  .navbar-nav .nav-link {
+    margin-right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transition for color change */
+  }
 
-    /* Adding overlay effect to the main content when sidebar is open */
-    .sidebar-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        /* Semi-transparent black */
-        z-index: 998;
-        /* Below the sidebar */
-        display: none;
-        /* Initially hidden */
-    }
+  .navbar-nav .nav-link:hover {
+    color: white;
+    transform: scale(1);
+  }
 
-    .sidebar.show+.sidebar-overlay {
-        display: block;
-        /* Show the overlay when sidebar is open */
-    }
+  /* NAVBAR customization - removing the box */
+  .navbar-toggler {
+    padding: 0;
+    /* Remove any padding that might affect the button size */
+    border: none !important;
+    background-color: transparent !important;
+    outline: none;
+  }
 
-    /* for navlink in sidebar */
-    .navbar-nav .nav-link {
-        margin-right: 15px;
-        font-size: 20px;
-        font-weight: bold;
-        transition: transform 0.3s ease-in-out;
-        /* Smooth transition for color change */
-    }
+  /* Remove the border and background for inner elements creating the icon appearance */
+  .navbar-toggler .navbar-toggler-icon {
+    border: none !important;
+    background-color: transparent !important;
+    outline: none;
+  }
 
-    .navbar-nav .nav-link:hover {
-        color: white;
-        transform: scale(1.0);
-
-    }
-
-    /* NAVBAR customization - removing the box */
-    .navbar-toggler {
-        padding: 0;
-        /* Remove any padding that might affect the button size */
-        border: none !important;
-        background-color: transparent !important;
-        outline: none;
-    }
-
-    /* Remove the border and background for inner elements creating the icon appearance */
-    .navbar-toggler .navbar-toggler-icon {
-        border: none !important;
-        background-color: transparent !important;
-        outline: none;
-    }
-
-    /* Remove focus and active states for the toggler */
-    .navbar-toggler:focus,
-    .navbar-toggler:active {
-        outline: none !important;
-        box-shadow: none !important;
-    }
-
+  /* Remove focus and active states for the toggler */
+  .navbar-toggler:focus,
+  .navbar-toggler:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
 }
 
 /* For LARGE SCREENS  992px to 1199px */
 @media (min-width: 992px) and (max-width: 1199px) {
+  .custom-button {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline;
+  }
 
-    .custom-button {
-        width: 30%;
-        margin-left: auto;
-        margin-right: auto;
-        display: inline;
-    }
-
-    #custom-btns.custom-button {
-        font-size: 18px;
-    }
-
+  #custom-btns.custom-button {
+    font-size: 18px;
+  }
 }
-
 
 /* Footer styles */
 .footer-icon {
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    margin-right: 0.5rem;
-    transition: transform 0.3s ease-in-out;
-    /* Adding smooth transition for the effect */
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease-in-out;
+  /* Adding smooth transition for the effect */
 }
 
 /* Hover effect to enlarge the icons */
 .footer-icon:hover {
-    transform: scale(1.5);
-    /* Increase the size when hovered */
+  transform: scale(1.5);
+  /* Increase the size when hovered */
 }
-
-
-
 
 /* hamburger to X transition */
 /* Icon 1 */
@@ -386,186 +365,182 @@
 .animated-icon1,
 .animated-icon2,
 .animated-icon3 {
-    width: 30px;
-    height: 20px;
-    position: relative;
-    margin: 0px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
-    cursor: pointer;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .animated-icon1 span,
 .animated-icon2 span,
 .animated-icon3 span {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .25s ease-in-out;
-    -moz-transition: .25s ease-in-out;
-    -o-transition: .25s ease-in-out;
-    transition: .25s ease-in-out;
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 .animated-icon1 span {
-    background: #000000;
+  background: #000000;
 }
 
 .animated-icon2 span {
-    background: #e3f2fd;
+  background: #e3f2fd;
 }
 
 .animated-icon3 span {
-    background: #f3e5f5;
+  background: #f3e5f5;
 }
 
 .animated-icon1 span:nth-child(1) {
-    top: 0px;
+  top: 0px;
 }
 
 .animated-icon1 span:nth-child(2) {
-    top: 10px;
+  top: 10px;
 }
 
 .animated-icon1 span:nth-child(3) {
-    top: 20px;
+  top: 20px;
 }
 
 .animated-icon1.open span:nth-child(1) {
-    top: 11px;
-    -webkit-transform: rotate(135deg);
-    -moz-transform: rotate(135deg);
-    -o-transform: rotate(135deg);
-    transform: rotate(135deg);
+  top: 11px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
 }
 
 .animated-icon1.open span:nth-child(2) {
-    opacity: 0;
-    left: -60px;
+  opacity: 0;
+  left: -60px;
 }
 
 .animated-icon1.open span:nth-child(3) {
-    top: 11px;
-    -webkit-transform: rotate(-135deg);
-    -moz-transform: rotate(-135deg);
-    -o-transform: rotate(-135deg);
-    transform: rotate(-135deg);
+  top: 11px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
 }
 
 /* Icon 3*/
 
 .animated-icon2 span:nth-child(1) {
-    top: 0px;
+  top: 0px;
 }
 
 .animated-icon2 span:nth-child(2),
 .animated-icon2 span:nth-child(3) {
-    top: 10px;
+  top: 10px;
 }
 
 .animated-icon2 span:nth-child(4) {
-    top: 20px;
+  top: 20px;
 }
 
 .animated-icon2.open span:nth-child(1) {
-    top: 11px;
-    width: 0%;
-    left: 50%;
+  top: 11px;
+  width: 0%;
+  left: 50%;
 }
 
 .animated-icon2.open span:nth-child(2) {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .animated-icon2.open span:nth-child(3) {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .animated-icon2.open span:nth-child(4) {
-    top: 11px;
-    width: 0%;
-    left: 50%;
+  top: 11px;
+  width: 0%;
+  left: 50%;
 }
 
 /* Icon 4 */
 
 .animated-icon3 span:nth-child(1) {
-    top: 0px;
-    -webkit-transform-origin: left center;
-    -moz-transform-origin: left center;
-    -o-transform-origin: left center;
-    transform-origin: left center;
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
 }
 
 .animated-icon3 span:nth-child(2) {
-    top: 10px;
-    -webkit-transform-origin: left center;
-    -moz-transform-origin: left center;
-    -o-transform-origin: left center;
-    transform-origin: left center;
+  top: 10px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
 }
 
 .animated-icon3 span:nth-child(3) {
-    top: 20px;
-    -webkit-transform-origin: left center;
-    -moz-transform-origin: left center;
-    -o-transform-origin: left center;
-    transform-origin: left center;
+  top: 20px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
 }
 
 .animated-icon3.open span:nth-child(1) {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    top: 0px;
-    left: 8px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 0px;
+  left: 8px;
 }
 
 .animated-icon3.open span:nth-child(2) {
-    width: 0%;
-    opacity: 0;
+  width: 0%;
+  opacity: 0;
 }
 
 .animated-icon3.open span:nth-child(3) {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    top: 21px;
-    left: 8px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 21px;
+  left: 8px;
 }
 
 .no-select {
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
-
-
-
 
 /* SITE COLOR SETUP
 /* SITE COLOR SETUP
@@ -579,43 +554,43 @@ D4A373
 
 /*  COLOR FOR HEADER  */
 .custom-navbar-bg {
-    background-color: #CCD5AE;
+  background-color: #ccd5ae;
 }
 
 .navbar-collapse {
-    background-color: #CCD5AE;
+  background-color: #ccd5ae;
 }
 
 .navbar-nav {
-    background-color: #CCD5AE;
+  background-color: #ccd5ae;
 }
 
 .navbar-toggler {
-    background-color: #CCD5AE;
+  background-color: #ccd5ae;
 }
 
 /* COLOR FOR FOOTER */
 
 .custom-footer-bg {
-    background-color: #D4A373;
+  background-color: #d4a373;
 }
 
 .custom-footer-text {
-    color: black !important;
+  color: black !important;
 }
 
 /* COLOR FOR CTA BANNER  */
 
 .custom-cta-bg {
-    background-color: #E9EDC9 !important;
+  background-color: #e9edc9 !important;
 }
 
 .custom-body-bg {
-    background-color: #FEFAE0 !important;
+  background-color: #fefae0 !important;
 }
 
 /* IMAGE BLENDING EDGES */
 
 .style-softedge {
-    mix-blend-mode: multiply;
+  mix-blend-mode: multiply;
 }
