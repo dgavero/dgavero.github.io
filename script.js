@@ -211,11 +211,38 @@ function setupTechnicalSkillsRerunButton() {
     btn.addEventListener("click", () => runSkillsAnimation());
 }
 
+function setupScrollReveal() {
+    const sections = document.querySelectorAll(".sr-section");
+    if (!sections.length) return;
+
+    // If user prefers reduced motion, reveal immediately with no animation.
+    if (prefersReducedMotion()) {
+        sections.forEach((el) => el.classList.add("sr-section--visible"));
+        return;
+    }
+
+    const observer = new IntersectionObserver(
+        (entries, obs) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("sr-section--visible");
+                obs.unobserve(entry.target); // run once per section
+            });
+        },
+        {
+            threshold: 0.15,
+        }
+    );
+
+    sections.forEach((el) => observer.observe(el));
+}
+
 // for progress bar animation 0-specified percentage
 $(document).ready(function() {
     renderTechnicalSkills();
     setupTechnicalSkillsObserver();
     setupTechnicalSkillsRerunButton();
+    setupScrollReveal();
 });
 
 

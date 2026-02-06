@@ -152,6 +152,19 @@
   /* Make the skills bold */
 }
 
+/* Scroll reveal sections */
+.sr-section {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 200ms ease-out, transform 200ms ease-out;
+  will-change: opacity, transform;
+}
+
+.sr-section.sr-section--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Technical Skills heading + rerun control */
 .technical-skills-heading-wrap {
   width: 100%;
@@ -261,6 +274,14 @@
   .technical-skills-rerun {
     width: 36px;
     height: 36px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sr-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
 
@@ -655,4 +676,17 @@ D4A373
 
 .style-softedge {
   mix-blend-mode: multiply;
+}
+
+/* Hero illustration container blending */
+.hero-illustration {
+  background-color: #fefae0; /* match .custom-body-bg */
+  border: none;
+  box-shadow: none;
+}
+
+.contact-illustration {
+  background-color: #fefae0; /* match .custom-body-bg */
+  border: none;
+  box-shadow: none;
 }
