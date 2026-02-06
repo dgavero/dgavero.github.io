@@ -17,3 +17,4 @@ This is a personal portfolio website being modernized.
 
 - Make incremental changes
 - Explain major changes before applying them
+- Scope changes to the task at hand; do not refactor unrelated sections
