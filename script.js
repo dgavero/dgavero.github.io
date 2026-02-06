@@ -1,5 +1,55 @@
 
+import { daveData } from "./daveData.js";
+
 console.log("devG here")
+
+function createSkillElement(skill) {
+    const skillWrapper = document.createElement("div");
+    skillWrapper.className = "skill";
+
+    const label = document.createElement("p");
+    label.id = "custom-texts";
+    label.textContent = skill.name;
+
+    const progress = document.createElement("div");
+    progress.className = "progress text-center";
+
+    const progressBar = document.createElement("div");
+    progressBar.className = "progress-bar bg-success";
+    progressBar.setAttribute("role", "progressbar");
+    progressBar.setAttribute("aria-valuenow", "0");
+    progressBar.setAttribute("aria-valuemin", "0");
+    progressBar.setAttribute("aria-valuemax", "100");
+
+    const percentage = document.createElement("span");
+    percentage.className = "percentage";
+    percentage.setAttribute("data-value", String(skill.percent));
+    percentage.textContent = "0%";
+
+    progressBar.appendChild(percentage);
+    progress.appendChild(progressBar);
+    skillWrapper.appendChild(label);
+    skillWrapper.appendChild(progress);
+
+    return skillWrapper;
+}
+
+function renderTechnicalSkills() {
+    const left = document.getElementById("technical-skills-left");
+    const right = document.getElementById("technical-skills-right");
+    if (!left || !right) return;
+
+    left.innerHTML = "";
+    right.innerHTML = "";
+
+    (daveData?.technicalSkills?.left || []).forEach((skill) => {
+        left.appendChild(createSkillElement(skill));
+    });
+
+    (daveData?.technicalSkills?.right || []).forEach((skill) => {
+        right.appendChild(createSkillElement(skill));
+    });
+}
 
 // $(document).ready(function() {
 //     let animated = false;
@@ -34,6 +84,8 @@ console.log("devG here")
 
 // for progress bar animation 0-specified percentage
 $(document).ready(function() {
+    renderTechnicalSkills();
+
     let animated = false;
 
     function animateSkills() {
@@ -81,6 +133,7 @@ function toggleSidebar() {
     const animatedIcon = document.querySelector('.animated-icon1');
     animatedIcon.classList.toggle('open');
 }
+window.toggleSidebar = toggleSidebar;
 
 // Adjust sidebar height based on navbar height
 window.addEventListener('load', function() {
