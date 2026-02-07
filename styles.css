@@ -690,3 +690,155 @@ D4A373
   border: none;
   box-shadow: none;
 }
+
+/* Case Studies section */
+.case-studies-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.case-studies-tab {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid #1e3163;
+  background-color: transparent;
+  color: #1e3163;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.case-studies-tab:hover {
+  background-color: rgba(30, 49, 99, 0.08);
+}
+
+.case-studies-tab.active {
+  background-color: #1e3163;
+  color: #fff;
+}
+
+.case-study-card {
+  transition: opacity 0.15s ease;
+}
+
+.case-study-card.hidden {
+  display: none !important;
+}
+
+.case-study-card .card {
+  height: 100%;
+  background-color: #f3f0dc;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-left: 6px solid transparent;
+
+}
+
+.case-study-card .card-title {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.case-study-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.case-study-tag {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  background-color: #e9edc9;
+  color: #1e3163;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+/* --- Case Studies: tag colors (soft pastel palette) --- */
+.case-study-tag--e2e {
+  background-color: #c9ffb2; /* matches your green card vibe */
+  color: #1e3163;
+}
+
+.case-study-tag--api {
+  background-color: #b2ccff; /* matches your blue card vibe */
+  color: #1e3163;
+}
+
+.case-study-tag--automation {
+  background-color: #ffd8b1; /* matches your orange card vibe */
+  color: #1e3163;
+}
+
+.case-study-tag--tools {
+  background-color: #e6ccff; /* matches your purple card vibe */
+  color: #1e3163;
+}
+
+.case-study-card[data-primary="E2E"] .card {
+  border-left-color: #a1cf6b;
+}
+
+.case-study-card[data-primary="API"] .card {
+  border-left-color: #8fb0ff;
+}
+
+.case-study-card[data-primary="Automation"] .card {
+  border-left-color: #ffbf8a;
+}
+
+.case-study-card[data-primary="Tools"] .card {
+  border-left-color: #caa8ff;
+}
+
+.case-study-card .card-text {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.case-study-highlights {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.case-study-highlights li {
+  margin-bottom: 0.25rem;
+}
+
+.case-study-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.case-study-stack-badge {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  background-color: #ccd5ae;
+  color: #333;
+  border-radius: 3px;
+}
+
+@media (max-width: 767px) {
+  .case-studies-tabs {
+    gap: 0.4rem;
+  }
+
+  .case-studies-tab {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Keep Case Studies filter buttons compact even on mobile */
+.case-studies-tab.custom-button {
+  width: auto;
+  display: inline-flex;
+}

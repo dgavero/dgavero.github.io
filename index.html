@@ -57,6 +57,9 @@
                   <a class="nav-link" href="#">Works</a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="#case-studies">Case Studies</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="#">Certifications</a>
                 </li>
                 <li class="nav-item">
@@ -84,6 +87,9 @@
       <ul class="nav flex-column mt-5 navbar-nav ms-4">
         <li class="nav-item">
           <a class="nav-link" href="#works">Works</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#case-studies">Case Studies</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#services">Services</a>
@@ -290,6 +296,18 @@
           aria-label="Technical skills right column"
         ></div>
       </div>
+    </div>
+
+    <div class="container py-3 my-2 sr-section" id="case-studies" aria-label="Case studies">
+      <h2 class="text-center custom-text my-4">Case Studies</h2>
+      <div class="case-studies-tabs" role="tablist" aria-label="Filter case studies">
+        <button type="button" class="btn btn-primary custom-button case-studies-tab active" data-filter="All" role="tab" aria-selected="true">All</button>
+        <button type="button" class="btn btn-primary custom-button case-studies-tab" data-filter="E2E" role="tab" aria-selected="false">E2E</button>
+        <button type="button" class="btn btn-primary custom-button case-studies-tab" data-filter="API" role="tab" aria-selected="false">API</button>
+        <button type="button" class="btn btn-primary custom-button case-studies-tab" data-filter="Automation" role="tab" aria-selected="false">Automation</button>
+        <button type="button" class="btn btn-primary custom-button case-studies-tab" data-filter="Tools" role="tab" aria-selected="false">Tools</button>
+      </div>
+      <div class="row" id="case-studies-cards"></div>
     </div>
 
     <div class="container-fluid bg-info py-3 my-2 custom-cta-bg">
