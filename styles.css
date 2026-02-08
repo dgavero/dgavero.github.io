@@ -68,6 +68,14 @@ html {
   --bootstrapLightBg: #f8f9fa;
   --textDark: #212529;
 
+  --toggleBg: #1c2f66;
+  --toggleBorder: #1c2f66;
+  --toggleIcon: #ffffff;
+  --toggleShadow: rgba(28, 47, 102, 0.22);
+  --toggleHoverBg: #223a7a;
+  --toggleHoverIcon: #ffffff;
+  --toggleFocus: rgba(28, 47, 102, 0.45);
+
   --tabBorder: #1e3163;
   --tabText: #1e3163;
   --tabHoverBg: rgba(30, 49, 99, 0.08);
@@ -155,6 +163,14 @@ html {
 
     --bootstrapLightBg: #1a263d;
     --textDark: #e5e7eb;
+
+    --toggleBg: #e9edc9;
+    --toggleBorder: #6ea8ff;
+    --toggleIcon: #1c2f66;
+    --toggleShadow: rgba(110, 168, 255, 0.28);
+    --toggleHoverBg: #f3f6dd;
+    --toggleHoverIcon: #1c2f66;
+    --toggleFocus: rgba(110, 168, 255, 0.6);
 
     --tabBorder: #6ea8ff;
     --tabText: #e5e7eb;
@@ -874,8 +890,34 @@ D4A373
 .custom-body-bg { background-color: var(--bg) !important; }
 .theme-bg-light { background-color: var(--bootstrapLightBg) !important; }
 .theme-text-dark { color: var(--textDark) !important; }
-.theme-toggle-btn { color: var(--textDark); border-color: var(--textDark); }
-.theme-toggle-btn:hover { color: var(--brandText); background-color: var(--brand); border-color: var(--brand); }
+.theme-toggle-btn {
+  color: var(--toggleIcon);
+  border-color: var(--toggleBorder);
+  background-color: var(--toggleBg);
+  border-radius: 999px;
+  min-width: 44px;
+  height: 34px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-size: 16px;
+  box-shadow: 0 4px 10px var(--toggleShadow);
+  transition: transform 0.2s ease, background-color 0.2s ease,
+    color 0.2s ease, box-shadow 0.2s ease;
+}
+.theme-toggle-btn:hover {
+  color: var(--toggleHoverIcon);
+  background-color: var(--toggleHoverBg);
+  border-color: var(--toggleBorder);
+  transform: scale(1.08);
+  box-shadow: 0 6px 14px var(--toggleShadow);
+}
+.theme-toggle-btn:focus-visible {
+  outline: 2px solid var(--toggleFocus);
+  outline-offset: 2px;
+}
 .theme-navbar .navbar-nav .nav-link { color: var(--textDark); }
 .service-card--testing { background-color: var(--serviceCardTesting); }
 .service-card--automation { background-color: var(--serviceCardAutomation); }
