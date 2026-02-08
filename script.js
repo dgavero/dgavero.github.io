@@ -350,6 +350,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupTechnicalSkillsObserver();
   setupTechnicalSkillsRerunButton();
   setupCiDemo();
+  setupThemeToggle();
   renderCaseStudies();
   setupCaseStudiesTabs();
   setCaseStudiesFilter("All");
@@ -535,4 +536,47 @@ function setupCiDemo() {
 
   // Initial state
   resetUi();
+}
+
+// =========================
+// Dark mode toggle
+// =========================
+function setupThemeToggle() {
+  const btn = document.getElementById("theme-toggle");
+  if (!btn) return;
+
+  const STORAGE_KEY = "theme";
+  const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)");
+
+  function apply(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem(STORAGE_KEY, theme);
+
+    btn.textContent = theme === "dark" ? "☀️" : "🌙";
+    btn.setAttribute(
+      "aria-label",
+      theme === "dark" ? "Switch to light mode" : "Switch to dark mode",
+    );
+    btn.title = theme === "dark" ? "Light mode" : "Dark mode";
+  }
+
+  // Initial theme
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved === "dark" || saved === "light") {
+    apply(saved);
+  } else {
+    apply(prefersDark?.matches ? "dark" : "light");
+  }
+
+  // Toggle on click
+  btn.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme");
+    apply(current === "dark" ? "light" : "dark");
+  });
+
+  // If user hasn't chosen manually, follow OS changes
+  prefersDark?.addEventListener?.("change", (e) => {
+    const savedNow = localStorage.getItem(STORAGE_KEY);
+    if (!savedNow) apply(e.matches ? "dark" : "light");
+  });
 }

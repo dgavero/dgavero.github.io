@@ -12,10 +12,209 @@ html {
   scroll-behavior: smooth;
 }
 
+/* =========================
+   THEME (Light/Dark)
+   ========================= */
+
+:root {
+  /* Core */
+  --bg: #fbf6dc;              /* page background */
+  --surface: #f1ecd2;         /* cards / sections */
+  --surface2: #e9edc9;        /* CTA / secondary panels (NEW) */
+  --text: #1f2937;            /* primary text */
+  --mutedText: #6b7280;       /* muted text (RENAMED from --muted) */
+  --muted: #6b7280;
+  --border: rgba(31, 41, 55, 0.12);
+
+  /* Brand */
+  --brand: #1c2f66;           /* primary buttons */
+  --brandText: #ffffff;
+
+  /* Layout / Components */
+  --navBg: #cfd8b1;           /* navbar */
+  --footerBg: #d4a373;        /* footer background (NEW) */
+  --chipBg: rgba(28, 47, 102, 0.10);
+  --shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+
+  --cardBg: var(--surface);
+  --ctaBg: var(--surface2);
+  --btnBg: var(--brand);
+  --btnText: var(--brandText);
+  --btnActiveBg: #ffffff;
+  --btnActiveBorder: #1e3163;
+  --btnActiveText: #1e3163;
+
+  --headingAccent: #8e82fe;
+  --navLinkHover: #ffffff;
+  --cardHoverTitle: #0000ff;
+  --progressText: #000000;
+  --progressFill: #a1cf6b;
+
+  --rerunBg: #2ea44f;
+  --rerunBorder: rgba(0, 0, 0, 0.08);
+  --rerunShadow: rgba(0, 0, 0, 0.05);
+  --rerunOutline: rgba(46, 164, 79, 0.45);
+  --rerunIcon: #ffffff;
+
+  --sidebarBg: #bdbebe;
+  --overlayBg: rgba(0, 0, 0, 0.5);
+  --hamburgerBar1: #000000;
+  --hamburgerBar2: #e3f2fd;
+  --hamburgerBar3: #f3e5f5;
+
+  --footerText: #000000;
+  --heroBg: #fefae0;
+
+  --bootstrapLightBg: #f8f9fa;
+  --textDark: #212529;
+
+  --tabBorder: #1e3163;
+  --tabText: #1e3163;
+  --tabHoverBg: rgba(30, 49, 99, 0.08);
+  --tabActiveBg: #1e3163;
+  --tabActiveText: #ffffff;
+
+  --tagBaseBg: #e9edc9;
+  --tagBaseText: #1e3163;
+  --tagE2E: #c9ffb2;
+  --tagApi: #b2ccff;
+  --tagAutomation: #ffd8b1;
+  --tagProcess: #e6ccff;
+  --tagText: #1e3163;
+  --tagBorderE2E: #a1cf6b;
+  --tagBorderApi: #8fb0ff;
+  --tagBorderAutomation: #ffbf8a;
+  --tagBorderProcess: #caa8ff;
+
+  --stackBadgeBg: #ccd5ae;
+  --stackBadgeText: #333333;
+
+  --serviceCardTesting: #c9ffb2;
+  --serviceCardAutomation: #ffd8b1;
+  --serviceCardTracking: #e6ccff;
+  --serviceCardQuality: #b2ccff;
+
+  --ciSubtext: rgba(30, 49, 99, 0.85);
+  --ciPillBg: rgba(30, 49, 99, 0.08);
+  --ciPillText: #1e3163;
+  --ciProgressTrack: rgba(30, 49, 99, 0.12);
+  --ciProgressFill: #1e3163;
+  --ciLogBg: rgba(255, 255, 255, 0.35);
+  --ciLogBorder: rgba(0, 0, 0, 0.06);
+  --ciLogText: #1e3163;
+  --ciSummaryBorder: rgba(30, 49, 99, 0.25);
+  --ciSummaryText: #1e3163;
+}
+
+  
+  html[data-theme="dark"] {
+    --bg: #121b2d;        /* deep navy (lighter) */
+    --surface: #182338;   /* card surface */
+    --surface2: #1b2842;
+    --text: #e5e7eb;
+    --mutedText: #9ca3af;
+    --muted: #9ca3af;
+    --border: rgba(229, 231, 235, 0.12);
+  
+    --brand: #6ea8ff;     /* soft “electric” accent */
+    --brandText: #0b1220;
+  
+    --navBg: #162235;
+    --chipBg: rgba(110, 168, 255, 0.16);
+    --shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+
+    --cardBg: #22324a;
+    --ctaBg: var(--surface2);
+    --btnBg: var(--brand);
+    --btnText: var(--brandText);
+    --btnActiveBg: #0b1220;
+    --btnActiveBorder: #6ea8ff;
+    --btnActiveText: #e5e7eb;
+
+    --headingAccent: #b6adff;
+    --navLinkHover: #e5e7eb;
+    --cardHoverTitle: #93c5fd;
+    --progressText: #e5e7eb;
+    --progressFill: #7fcf8f;
+
+    --rerunBg: #2ea44f;
+    --rerunBorder: rgba(255, 255, 255, 0.12);
+    --rerunShadow: rgba(0, 0, 0, 0.45);
+    --rerunOutline: rgba(46, 164, 79, 0.55);
+    --rerunIcon: #ffffff;
+
+    --sidebarBg: #111827;
+    --overlayBg: rgba(0, 0, 0, 0.6);
+    --hamburgerBar1: #e5e7eb;
+    --hamburgerBar2: #7aa2ff;
+    --hamburgerBar3: #d7c9ff;
+
+    --footerBg: #162235;
+    --footerText: #e5e7eb;
+    --heroBg: #1a263d;
+
+    --bootstrapLightBg: #1a263d;
+    --textDark: #e5e7eb;
+
+    --tabBorder: #6ea8ff;
+    --tabText: #e5e7eb;
+    --tabHoverBg: rgba(110, 168, 255, 0.16);
+    --tabActiveBg: #6ea8ff;
+    --tabActiveText: #0b1220;
+
+    --tagBaseBg: #2b3b57;
+    --tagBaseText: #f8fafc;
+    --tagE2E: #3a5f42;
+    --tagApi: #3a4f7a;
+    --tagAutomation: #6a4a33;
+    --tagProcess: #4a3c66;
+    --tagText: #f8fafc;
+    --tagBorderE2E: #7fcf8f;
+    --tagBorderApi: #9bb6ff;
+    --tagBorderAutomation: #f1b58a;
+    --tagBorderProcess: #caa8ff;
+
+    --stackBadgeBg: #1b2b45;
+    --stackBadgeText: #e5e7eb;
+
+    --serviceCardTesting: #3a5a42;
+    --serviceCardAutomation: #5a4332;
+    --serviceCardTracking: #4a3b61;
+    --serviceCardQuality: #30456f;
+
+    --ciSubtext: rgba(229, 231, 235, 0.78);
+    --ciPillBg: rgba(110, 168, 255, 0.16);
+    --ciPillText: #dbeafe;
+    --ciProgressTrack: rgba(110, 168, 255, 0.2);
+    --ciProgressFill: #6ea8ff;
+    --ciLogBg: rgba(15, 23, 42, 0.7);
+    --ciLogBorder: rgba(148, 163, 184, 0.2);
+    --ciLogText: #e5e7eb;
+    --ciSummaryBorder: rgba(148, 163, 184, 0.35);
+    --ciSummaryText: #e5e7eb;
+  }
+
+  html[data-theme="dark"] .text-secondary {
+    color: var(--mutedText) !important;
+  }
+  
+  /* Apply theme */
+  body {
+    background: var(--bg);
+    color: var(--text);
+  }
+  
+  /* Optional: smooth but not over-animated */
+  @media (prefers-reduced-motion: no-preference) {
+    body {
+      transition: background-color 180ms ease, color 180ms ease;
+    }
+  }
+
 /* common styles for custom fonts  */
 #custom-h1 {
   font-size: 50px;
-  color: #8e82fe;
+  color: var(--headingAccent);
 }
 
 .custom-text h3 {
@@ -48,16 +247,16 @@ html {
 }
 
 .navbar-nav .nav-link:hover {
-  color: white; /* Change color on hover */
+  color: var(--navLinkHover); /* Change color on hover */
   transform: scale(1.1); /* Scale effect on hover */
 }
 
 /* Uniform Format for buttons */
 .custom-button {
   transition: transform 0.5s ease-in-out;
-  color: #fff;
-  background-color: #1e3163;
-  border-color: #1e3163;
+  color: var(--btnText);
+  background-color: var(--btnBg);
+  border-color: var(--btnBg);
 }
 
 #custom-btns.custom-button {
@@ -67,15 +266,15 @@ html {
 /* Hover effect to enlarge the buttons */
 .custom-button:hover {
   transform: scale(1.1);
-  color: #1e3163; /* Change text color on hover */
-  background-color: #fff; /* Change button background color on hover */
-  border-color: #1e3163; /* Change border color on hover */
+  color: var(--btnBg);
+  background-color: var(--brandText);
+  border-color: var(--btnBg);
 }
 
 .custom-button:active {
-  background-color: #1e3163 !important;
-  border-color: #1e3163;
-  background-color: #fff;
+  background-color: var(--btnActiveBg) !important;
+  border-color: var(--btnActiveBorder);
+  color: var(--btnActiveText);
 }
 
 /* Custom styles for education details and background*/
@@ -126,7 +325,7 @@ html {
 }
 
 .card:hover .card-title {
-  color: blue;
+  color: var(--cardHoverTitle);
   /* Change to the desired color */
 }
 
@@ -153,7 +352,7 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: black;
+  color: var(--progressText);
   z-index: 1;
   /* Ensures the text is on top of the progress bar */
 }
@@ -162,8 +361,8 @@ html {
 .progress-bar {
   background: linear-gradient(
     to right,
-    #a1cf6b 0%,
-    #a1cf6b 100% /* Green: 81-100% */
+    var(--progressFill) 0%,
+    var(--progressFill) 100% /* Green: 81-100% */
   );
   border-radius: 5px;
 }
@@ -209,9 +408,9 @@ html {
   padding: 0;
   line-height: 1;
 
-  background-color: #2ea44f; /* tasteful green */
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  background-color: var(--rerunBg); /* tasteful green */
+  border: 1px solid var(--rerunBorder);
+  box-shadow: 0 1px 0 var(--rerunShadow);
 
   cursor: pointer;
   transition: transform 0.15s ease-in-out, filter 0.15s ease-in-out;
@@ -227,7 +426,7 @@ html {
 }
 
 .technical-skills-rerun:focus-visible {
-  outline: 2px solid rgba(46, 164, 79, 0.45);
+  outline: 2px solid var(--rerunOutline);
   outline-offset: 3px;
 }
 
@@ -236,7 +435,7 @@ html {
   height: 0;
   border-top: 6px solid transparent;
   border-bottom: 6px solid transparent;
-  border-left: 10px solid #ffffff;
+  border-left: 10px solid var(--rerunIcon);
   margin-left: 2px; /* visually center triangle */
 }
 
@@ -363,7 +562,7 @@ html {
     /* Initially off the screen */
     width: 40%;
     height: 100vh;
-    background-color: #bdbebe;
+    background-color: var(--sidebarBg);
     /* Set your desired color */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     /* Adding shadow */
@@ -384,7 +583,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--overlayBg);
     /* Semi-transparent black */
     z-index: 998;
     /* Below the sidebar */
@@ -407,7 +606,7 @@ html {
   }
 
   .navbar-nav .nav-link:hover {
-    color: white;
+    color: var(--navLinkHover);
     transform: scale(1);
   }
 
@@ -507,15 +706,15 @@ html {
 }
 
 .animated-icon1 span {
-  background: #000000;
+  background: var(--hamburgerBar1);
 }
 
 .animated-icon2 span {
-  background: #e3f2fd;
+  background: var(--hamburgerBar2);
 }
 
 .animated-icon3 span {
-  background: #f3e5f5;
+  background: var(--hamburgerBar3);
 }
 
 .animated-icon1 span:nth-child(1) {
@@ -659,41 +858,38 @@ D4A373
 */
 
 /*  COLOR FOR HEADER  */
-.custom-navbar-bg {
-  background-color: #ccd5ae;
-}
-
-.navbar-collapse {
-  background-color: #ccd5ae;
-}
-
-.navbar-nav {
-  background-color: #ccd5ae;
-}
-
+.custom-navbar-bg,
+.navbar-collapse,
+.navbar-nav,
 .navbar-toggler {
-  background-color: #ccd5ae;
+  background-color: var(--navBg);
 }
 
 /* COLOR FOR FOOTER */
-
-.custom-footer-bg {
-  background-color: #d4a373;
-}
-
 .custom-footer-text {
-  color: black !important;
+  color: var(--footerText) !important;
+}
+.custom-footer-bg { background-color: var(--footerBg); }
+.custom-cta-bg { background-color: var(--ctaBg) !important; }
+.custom-body-bg { background-color: var(--bg) !important; }
+.theme-bg-light { background-color: var(--bootstrapLightBg) !important; }
+.theme-text-dark { color: var(--textDark) !important; }
+.theme-toggle-btn { color: var(--textDark); border-color: var(--textDark); }
+.theme-toggle-btn:hover { color: var(--brandText); background-color: var(--brand); border-color: var(--brand); }
+.theme-navbar .navbar-nav .nav-link { color: var(--textDark); }
+.service-card--testing { background-color: var(--serviceCardTesting); }
+.service-card--automation { background-color: var(--serviceCardAutomation); }
+.service-card--tracking { background-color: var(--serviceCardTracking); }
+.service-card--quality { background-color: var(--serviceCardQuality); }
+
+html[data-theme="dark"] .service-card--testing,
+html[data-theme="dark"] .service-card--automation,
+html[data-theme="dark"] .service-card--tracking,
+html[data-theme="dark"] .service-card--quality,
+html[data-theme="dark"] .case-study-card .card {
+  color: var(--text);
 }
 
-/* COLOR FOR CTA BANNER  */
-
-.custom-cta-bg {
-  background-color: #e9edc9 !important;
-}
-
-.custom-body-bg {
-  background-color: #fefae0 !important;
-}
 
 /* IMAGE BLENDING EDGES */
 
@@ -701,15 +897,32 @@ D4A373
   mix-blend-mode: multiply;
 }
 
+html[data-theme="dark"] .style-softedge {
+  mix-blend-mode: normal;
+}
+
+html[data-theme="dark"] .hero-illustration img,
+html[data-theme="dark"] .contact-illustration img {
+  filter: drop-shadow(0 0 0 transparent) !important;
+  box-shadow: none !important;
+  background-color: #ffffff;
+  display: block;
+}
+
+html[data-theme="dark"] .hero-illustration,
+html[data-theme="dark"] .contact-illustration {
+  background-color: #ffffff;
+}
+
 /* Hero illustration container blending */
 .hero-illustration {
-  background-color: #fefae0; /* match .custom-body-bg */
+  background-color: var(--heroBg); /* match .custom-body-bg */
   border: none;
   box-shadow: none;
 }
 
 .contact-illustration {
-  background-color: #fefae0; /* match .custom-body-bg */
+  background-color: var(--heroBg); /* match .custom-body-bg */
   border: none;
   box-shadow: none;
 }
@@ -727,21 +940,21 @@ D4A373
   padding: 0.35rem 0.75rem;
   font-size: 0.95rem;
   font-weight: 600;
-  border: 1px solid #1e3163;
+  border: 1px solid var(--tabBorder);
   background-color: transparent;
-  color: #1e3163;
+  color: var(--tabText);
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .case-studies-tab:hover {
-  background-color: rgba(30, 49, 99, 0.08);
+  background-color: var(--tabHoverBg);
 }
 
 .case-studies-tab.active {
-  background-color: #1e3163;
-  color: #fff;
+  background-color: var(--tabActiveBg);
+  color: var(--tabActiveText);
 }
 
 .case-study-card {
@@ -754,8 +967,8 @@ D4A373
 
 .case-study-card .card {
   height: 100%;
-  background-color: #f3f0dc;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: var(--cardBg);
+  border: 1px solid var(--border);
   border-left: 6px solid transparent;
 
 }
@@ -775,47 +988,47 @@ D4A373
 .case-study-tag {
   font-size: 0.75rem;
   padding: 0.2rem 0.5rem;
-  background-color: #e9edc9;
-  color: #1e3163;
+  background-color: var(--tagBaseBg);
+  color: var(--tagBaseText);
   border-radius: 3px;
   font-weight: 600;
 }
 
 /* --- Case Studies: tag colors (soft pastel palette) --- */
 .case-study-tag--e2e {
-  background-color: #c9ffb2; /* matches your green card vibe */
-  color: #1e3163;
+  background-color: var(--tagE2E); /* matches your green card vibe */
+  color: var(--tagText);
 }
 
 .case-study-tag--api {
-  background-color: #b2ccff; /* matches your blue card vibe */
-  color: #1e3163;
+  background-color: var(--tagApi); /* matches your blue card vibe */
+  color: var(--tagText);
 }
 
 .case-study-tag--automation {
-  background-color: #ffd8b1; /* matches your orange card vibe */
-  color: #1e3163;
+  background-color: var(--tagAutomation); /* matches your orange card vibe */
+  color: var(--tagText);
 }
 
 .case-study-tag--process {
-  background-color: #e6ccff; /* matches your purple card vibe */
-  color: #1e3163;
+  background-color: var(--tagProcess); /* matches your purple card vibe */
+  color: var(--tagText);
 }
 
 .case-study-card[data-primary="E2E"] .card {
-  border-left-color: #a1cf6b;
+  border-left-color: var(--tagBorderE2E);
 }
 
 .case-study-card[data-primary="API"] .card {
-  border-left-color: #8fb0ff;
+  border-left-color: var(--tagBorderApi);
 }
 
 .case-study-card[data-primary="Automation"] .card {
-  border-left-color: #ffbf8a;
+  border-left-color: var(--tagBorderAutomation);
 }
 
 .case-study-card[data-primary="Process"] .card {
-  border-left-color: #caa8ff;
+  border-left-color: var(--tagBorderProcess);
 }
 
 .case-study-card .card-text {
@@ -844,8 +1057,8 @@ D4A373
 .case-study-stack-badge {
   font-size: 0.75rem;
   padding: 0.2rem 0.5rem;
-  background-color: #ccd5ae;
-  color: #333;
+  background-color: var(--stackBadgeBg);
+  color: var(--stackBadgeText);
   border-radius: 3px;
 }
 
@@ -871,8 +1084,8 @@ D4A373
    Signature Tester Interaction (CI Demo)
    ========================= */
    .ci-demo-card {
-    background-color: #f3f0dc; /* matches your case study card vibe */
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    background-color: var(--cardBg);
+    border: 1px solid var(--border);
     border-radius: 14px;
     padding: 18px 18px 14px;
   }
@@ -889,8 +1102,8 @@ D4A373
     font-size: 1.6rem;
   }
   
-  .ci-demo-subtext {
-    color: rgba(30, 49, 99, 0.85);
+.ci-demo-subtext {
+    color: var(--ciSubtext);
     font-size: 0.95rem;
   }
   
@@ -909,7 +1122,7 @@ D4A373
     align-items: center;
   }
   
-  .ci-meta-pill {
+.ci-meta-pill {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -917,22 +1130,22 @@ D4A373
     border-radius: 999px;
     font-weight: 600;
     font-size: 0.85rem;
-    background-color: rgba(30, 49, 99, 0.08);
-    color: #1e3163;
+    background-color: var(--ciPillBg);
+    color: var(--ciPillText);
   }
   
-  .ci-progress {
+.ci-progress {
     margin-top: 12px;
     height: 10px;
-    background: rgba(30, 49, 99, 0.12);
+    background: var(--ciProgressTrack);
     border-radius: 999px;
     overflow: hidden;
   }
   
-  .ci-progress-bar {
+.ci-progress-bar {
     height: 100%;
     width: 0%;
-    background: #1e3163; /* your navy */
+    background: var(--ciProgressFill); /* your navy */
     transition: width 0.18s ease;
   }
   
@@ -946,12 +1159,12 @@ D4A373
     overflow: auto;
   }
   
-  .ci-log li {
-    background: rgba(255, 255, 255, 0.35);
-    border: 1px solid rgba(0, 0, 0, 0.06);
+.ci-log li {
+    background: var(--ciLogBg);
+    border: 1px solid var(--ciLogBorder);
     border-radius: 10px;
     padding: 10px 12px;
-    color: #1e3163;
+    color: var(--ciLogText);
     font-size: 0.92rem;
   }
   
@@ -967,11 +1180,11 @@ D4A373
     content: "⏭️ ";
   }
   
-  .ci-demo-summary {
+.ci-demo-summary {
     margin-top: 12px;
     padding-top: 10px;
-    border-top: 1px dashed rgba(30, 49, 99, 0.25);
-    color: #1e3163;
+    border-top: 1px dashed var(--ciSummaryBorder);
+    color: var(--ciSummaryText);
     font-weight: 600;
     min-height: 22px;
   }

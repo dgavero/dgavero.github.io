@@ -25,18 +25,18 @@
   </head>
 
   <body class="custom-body-bg">
-    <div class="sticky-top bg-light">
+    <div class="sticky-top theme-bg-light">
       <header
         class="p-3 d-flex justify-content-between align-items-center custom-navbar-bg"
       >
         <h1 class="mb-0 ms-5">
           <a   
             href="index.html"
-            class="text-decoration-none text-dark d-block no-select"
+            class="text-decoration-none theme-text-dark d-block no-select"
             >devG</a
           >
         </h1>
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg theme-navbar">
           <div class="container-fluid custom-navbar-bg">
             <!-- Navbar content -->
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -66,7 +66,15 @@
                   <a class="nav-link" href="#contact">Contact</a>
                 </li>
               </ul>
-              
+              <button
+              type="button"
+              id="theme-toggle"
+              class="btn btn-sm ms-2 theme-toggle-btn"
+              aria-label="Toggle dark mode"
+              title="Toggle dark mode"
+            >
+              🌙
+            </button>
             </div>
           </div>
         </nav>
@@ -131,7 +139,7 @@
       </div>
     </div>
 
-    <div class="container bg-light py-3 mt-3 style-softedge border sr-section">
+    <div class="container theme-bg-light py-3 mt-3 style-softedge border sr-section">
       <div class="container row align-items-center">
         <div class="education-details col-md-6 text-center text-md-start">
           <h2 class="fw-bold custom-text">Education</h2>
@@ -155,7 +163,7 @@
       <div class="row">
         <!-- Card 1: Software Testing -->
         <div class="col-xl-3 col-lg-6 mb-4">
-          <div class="card h-100" style="background-color: #c9ffb2">
+          <div class="card h-100 service-card--testing">
             <div class="card-body">
               <img
                 src="images/icons/software-testing.png"
@@ -174,7 +182,7 @@
 
         <!-- Card 2: Test Automation -->
         <div class="col-xl-3 col-lg-6 mb-4">
-          <div class="card h-100" style="background-color: #ffd8b1">
+          <div class="card h-100 service-card--automation">
             <div class="card-body">
               <img
                 src="images/icons/test-automation.png"
@@ -193,7 +201,7 @@
 
         <!-- Card 3: Bug Tracking & Reporting -->
         <div class="col-xl-3 col-lg-6 mb-4">
-          <div class="card h-100" style="background-color: #e6ccff">
+          <div class="card h-100 service-card--tracking">
             <div class="card-body">
               <img
                 src="images/icons/bug.png"
@@ -212,7 +220,7 @@
 
         <!-- Card 4: Quality Engineering -->
         <div class="col-xl-3 col-lg-6 mb-4">
-          <div class="card h-100" style="background-color: #b2ccff">
+          <div class="card h-100 service-card--quality">
             <div class="card-body text-center">
               <img
                 src="images/icons/qa-eng.png"
