@@ -366,6 +366,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const name = document.getElementById("name")?.value?.trim() || "";
       const email = document.getElementById("email")?.value?.trim() || "";
       const message = document.getElementById("message")?.value?.trim() || "";
+      const submitBtn = form.querySelector('button[type="submit"]');
 
       if (!name || !email || !message) {
         alert("Please fill in all fields.");
@@ -378,7 +379,46 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      form.reset();
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+      }
+
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+        .then((response) => {
+          if (!response.ok) throw new Error("Request failed");
+          form.reset();
+
+          const modalEl = document.getElementById("contactSuccessModal");
+          if (modalEl && window.bootstrap?.Modal) {
+            const modal = window.bootstrap.Modal.getOrCreateInstance(modalEl);
+            modal.show();
+          } else {
+            alert("Message sent successfully.");
+          }
+        })
+        .catch(() => {
+          const errorModalEl = document.getElementById("contactErrorModal");
+          if (errorModalEl && window.bootstrap?.Modal) {
+            const modal = window.bootstrap.Modal.getOrCreateInstance(errorModalEl);
+            modal.show();
+          } else {
+            alert("Form is temporarily unavailable—please email me directly.");
+          }
+        })
+        .finally(() => {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Send";
+          }
+        });
     });
   }
 });

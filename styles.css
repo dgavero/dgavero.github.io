@@ -918,6 +918,26 @@ D4A373
   outline: 2px solid var(--toggleFocus);
   outline-offset: 2px;
 }
+
+/* Contact modal theming */
+.theme-modal .modal-content {
+  background-color: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.theme-modal .modal-header,
+.theme-modal .modal-footer {
+  border-color: var(--border);
+}
+
+.theme-modal .btn-close {
+  filter: none;
+}
+
+html[data-theme="dark"] .theme-modal .btn-close {
+  filter: invert(1);
+}
 .theme-navbar .navbar-nav .nav-link { color: var(--textDark); }
 .service-card--testing { background-color: var(--serviceCardTesting); }
 .service-card--automation { background-color: var(--serviceCardAutomation); }
