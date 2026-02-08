@@ -774,7 +774,7 @@ D4A373
   color: #1e3163;
 }
 
-.case-study-tag--tools {
+.case-study-tag--process {
   background-color: #e6ccff; /* matches your purple card vibe */
   color: #1e3163;
 }
@@ -791,7 +791,7 @@ D4A373
   border-left-color: #ffbf8a;
 }
 
-.case-study-card[data-primary="Tools"] .card {
+.case-study-card[data-primary="Process"] .card {
   border-left-color: #caa8ff;
 }
 

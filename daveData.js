@@ -34,7 +34,7 @@ export const daveData = {
     },
     {
       title: "API Automation Harness for GraphQL & REST",
-      tags: ["API", "Automation", "Tools"],
+      tags: ["API", "Automation"],
       summary:
         "Created an API test harness with reusable helpers, auth handling, and clear negative-testing patterns for fast feedback and maintainability.",
       highlights: [
@@ -47,7 +47,7 @@ export const daveData = {
     },
     {
       title: "Test Reporting & CI-Friendly Execution",
-      tags: ["Tools", "Automation"],
+      tags: ["Process", "Automation"],
       summary:
         "Improved test visibility with structured logs and summary reporting to make failures actionable and speed up triage.",
       highlights: [
@@ -60,7 +60,7 @@ export const daveData = {
     },
     {
       title: "Mobile Automation Exploration",
-      tags: ["Tools", "Automation"],
+      tags: ["Process", "Automation"],
       summary:
         "Explored mobile automation flows and validations to understand coverage needs and evaluate feasibility for scaling.",
       highlights: [
@@ -69,6 +69,71 @@ export const daveData = {
         "Recommendations for scaling coverage",
       ],
       stack: ["Appium", "Python"],
+      links: [],
+    },
+    {
+      title: "Custom E2E Automation Framework with Selenide (Java)",
+      tags: ["E2E", "Automation", "Process"],
+      summary:
+        "Designed and maintained a custom end-to-end automation framework using Selenide and Java to support reliable regression testing at scale.",
+      highlights: [
+        "Built reusable test utilities and base components",
+        "Improved test stability through smarter waits and selector strategies",
+        "Reduced maintenance cost by standardizing test patterns",
+      ],
+      stack: ["Selenide", "Java", "Custom Framework"],
+      links: [],
+    },
+    {
+      title: "API Validation & Data Integrity Testing with Postman",
+      tags: ["API", "Process"],
+      summary:
+        "Validated backend APIs using Postman to ensure correct data handling, response accuracy, and integration stability across services.",
+      highlights: [
+        "Verified request/response contracts and edge cases",
+        "Identified data inconsistencies before UI integration",
+        "Supported backend teams with clear reproduction steps",
+      ],
+      stack: ["Postman", "REST", "JSON"],
+      links: [],
+    },
+    {
+      title: "Automated Web Testing with Playwright",
+      tags: ["E2E", "Automation"],
+      summary:
+        "Implemented automated web tests using Playwright to validate critical user flows and prevent regressions in fast-moving environments.",
+      highlights: [
+        "Covered critical paths and regression scenarios",
+        "Used Playwright fixtures and helpers for cleaner tests",
+        "Balanced speed and reliability in CI execution",
+      ],
+      stack: ["Playwright", "JavaScript", "Web Automation"],
+      links: [],
+    },
+    {
+      title: "Manual Web & Mobile Testing Coverage",
+      tags: ["Process"],
+      summary:
+        "Performed thorough manual testing across web and mobile platforms to ensure feature correctness, usability, and regression safety.",
+      highlights: [
+        "Executed functional, regression, and exploratory testing",
+        "Validated responsive behavior and mobile-specific flows",
+        "Provided clear bug reports with reproduction steps",
+      ],
+      stack: ["Manual Testing", "Web", "Mobile"],
+      links: [],
+    },
+    {
+      title: "STLC Ownership & End-to-End Test Process Coverage",
+      tags: ["Process"],
+      summary:
+        "Applied structured STLC practices to ensure consistent test coverage from requirement analysis through release validation.",
+      highlights: [
+        "Participated in requirement reviews and test planning",
+        "Designed test cases aligned with business scenarios",
+        "Ensured regression readiness before releases",
+      ],
+      stack: ["STLC", "Test Planning", "Quality Processes"],
       links: [],
     },
   ],
