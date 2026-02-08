@@ -8,6 +8,10 @@
    p -  18px  -- 16px
 */
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* common styles for custom fonts  */
 #custom-h1 {
   font-size: 50px;
@@ -89,6 +93,25 @@
   width: 50px;
   height: 50px;
   margin-bottom: 10px;
+}
+
+/* Offset anchor scroll for fixed header */
+#works,
+#technical-skills,
+#case-studies,
+#services,
+#contact {
+  scroll-margin-top: 90px; /* adjust if navbar height changes */
+}
+
+@media (max-width: 768px) {
+  #works,
+  #technical-skills,
+  #case-studies,
+  #services,
+  #contact {
+    scroll-margin-top: 110px;
+  }
 }
 
 /* cards animation to scale in hover*/
