@@ -842,3 +842,114 @@ D4A373
   width: auto;
   display: inline-flex;
 }
+
+
+/* =========================
+   Signature Tester Interaction (CI Demo)
+   ========================= */
+   .ci-demo-card {
+    background-color: #f3f0dc; /* matches your case study card vibe */
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
+    padding: 18px 18px 14px;
+  }
+  
+  .ci-demo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .ci-demo-title {
+    font-size: 1.6rem;
+  }
+  
+  .ci-demo-subtext {
+    color: rgba(30, 49, 99, 0.85);
+    font-size: 0.95rem;
+  }
+  
+  .ci-demo-run.custom-button {
+    width: auto; /* prevent mobile 70% rule */
+    padding: 8px 14px;
+    font-size: 0.95rem;
+    border-radius: 10px;
+  }
+  
+  .ci-demo-meta {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .ci-meta-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    background-color: rgba(30, 49, 99, 0.08);
+    color: #1e3163;
+  }
+  
+  .ci-progress {
+    margin-top: 12px;
+    height: 10px;
+    background: rgba(30, 49, 99, 0.12);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  
+  .ci-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #1e3163; /* your navy */
+    transition: width 0.18s ease;
+  }
+  
+  .ci-log {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+    display: grid;
+    gap: 8px;
+    max-height: 180px;
+    overflow: auto;
+  }
+  
+  .ci-log li {
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    padding: 10px 12px;
+    color: #1e3163;
+    font-size: 0.92rem;
+  }
+  
+  .ci-log .ok::before {
+    content: "✅ ";
+  }
+  
+  .ci-log .run::before {
+    content: "⏳ ";
+  }
+  
+  .ci-log .skip::before {
+    content: "⏭️ ";
+  }
+  
+  .ci-demo-summary {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px dashed rgba(30, 49, 99, 0.25);
+    color: #1e3163;
+    font-weight: 600;
+    min-height: 22px;
+  }
+  

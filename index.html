@@ -298,6 +298,46 @@
       </div>
     </div>
 
+
+    <!-- Signature Tester Interaction: Sample CI Test Run -->
+<div class="container py-3 my-3 sr-section" id="ci-demo" aria-label="Sample CI test run">
+  <div class="ci-demo-card">
+    <div class="ci-demo-header">
+      <div>
+        <h2 class="custom-text ci-demo-title mb-1">CI Test Run</h2>
+        <p class="ci-demo-subtext mb-0">
+          Simulation: How Automation typically runs in CI (no backend calls).
+        </p>
+      </div>
+
+      <button
+        type="button"
+        id="ci-demo-run"
+        class="btn btn-primary custom-button ci-demo-run"
+        aria-label="Run sample test suite"
+      >
+        Run Tests
+      </button>
+    </div>
+
+    <div class="ci-demo-meta">
+      <span class="ci-meta-pill">Suite: Smoke</span>
+      <span class="ci-meta-pill">Env: Dev</span>
+      <span class="ci-meta-pill" id="ci-demo-status" aria-live="polite">Idle</span>
+    </div>
+
+    <div class="ci-progress" aria-label="Test run progress">
+      <div class="ci-progress-bar" id="ci-demo-bar" style="width: 0%"></div>
+    </div>
+
+    <ul class="ci-log" id="ci-demo-log" aria-label="Test run logs"></ul>
+
+    <div class="ci-demo-summary" id="ci-demo-summary" aria-live="polite"></div>
+  </div>
+</div>
+
+
+
     <div class="container py-3 my-2 sr-section" id="case-studies" aria-label="Case studies">
       <h2 class="text-center custom-text my-4">Case Studies</h2>
       <div class="case-studies-tabs" role="tablist" aria-label="Filter case studies">

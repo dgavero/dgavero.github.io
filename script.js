@@ -349,7 +349,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderTechnicalSkills();
   setupTechnicalSkillsObserver();
   setupTechnicalSkillsRerunButton();
-
+  setupCiDemo();
   renderCaseStudies();
   setupCaseStudiesTabs();
   setCaseStudiesFilter("All");
@@ -400,3 +400,139 @@ window.addEventListener("load", function () {
   sidebar.style.top = navbarHeight + "px";
   sidebar.style.height = "calc(100vh - " + navbarHeight + "px)";
 });
+
+// ----------------------------
+// Signature Tester Interaction: CI Demo (Simulation)
+// ----------------------------
+function setupCiDemo() {
+  const runBtn = document.getElementById("ci-demo-run");
+  const statusEl = document.getElementById("ci-demo-status");
+  const barEl = document.getElementById("ci-demo-bar");
+  const logEl = document.getElementById("ci-demo-log");
+  const summaryEl = document.getElementById("ci-demo-summary");
+
+  if (!runBtn || !statusEl || !barEl || !logEl || !summaryEl) return;
+
+  const reduceMotion =
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  let isRunning = false;
+  let runToken = 0;
+
+  const steps = [
+    { text: "Initialize test runner", state: "run" },
+    { text: "Launch browser context", state: "run" },
+    { text: "E2E: Login flow", state: "ok" },
+    { text: "API: Auth validation", state: "ok" },
+    { text: "E2E: Dashboard load", state: "ok" },
+    { text: "Automation: Generate CI report", state: "ok" },
+    { text: "Process: Save artifacts (screenshots/logs)", state: "skip" },
+  ];
+
+  function resetUi() {
+    barEl.style.width = "0%";
+    logEl.innerHTML = "";
+    summaryEl.textContent = "";
+    statusEl.textContent = "Idle";
+  }
+
+  function addLogLine(text, state) {
+    const li = document.createElement("li");
+    li.className = state; // ok | run | skip
+    li.textContent = text;
+    logEl.appendChild(li);
+    // keep newest visible
+    logEl.scrollTop = logEl.scrollHeight;
+  }
+
+  function setProgress(pct) {
+    barEl.style.width = `${Math.max(0, Math.min(100, pct))}%`;
+  }
+
+  function finishSummary() {
+    // Keep it believable, not "too perfect"
+    const passed = 6;
+    const skipped = 1;
+    const failed = 0;
+
+    statusEl.textContent = "Completed";
+    summaryEl.textContent = `✅ Completed: ${passed} passed · ${failed} failed · ${skipped} skipped`;
+  }
+
+  function runSimulation() {
+    if (isRunning) return;
+    isRunning = true;
+    runToken += 1;
+    const token = runToken;
+
+    runBtn.disabled = true;
+    runBtn.textContent = "Running...";
+    statusEl.textContent = "Running";
+    summaryEl.textContent = "";
+    logEl.innerHTML = "";
+    setProgress(0);
+
+    // Reduced motion: snap to final instantly, still update content
+    if (reduceMotion) {
+      steps.forEach((s) =>
+        addLogLine(s.text, s.state === "run" ? "ok" : s.state),
+      );
+      setProgress(100);
+      finishSummary();
+      runBtn.disabled = false;
+      runBtn.textContent = "Run Again";
+      isRunning = false;
+      return;
+    }
+
+    let i = 0;
+    const total = steps.length;
+
+    function next() {
+      if (token !== runToken) return; // canceled
+      if (i >= total) {
+        setProgress(100);
+        finishSummary();
+        runBtn.disabled = false;
+        runBtn.textContent = "Run Again";
+        isRunning = false;
+        return;
+      }
+
+      const step = steps[i];
+
+      // If it's a "run" step, show as running then mark ok
+      if (step.state === "run") {
+        addLogLine(step.text, "run");
+        setProgress(Math.round(((i + 0.25) / total) * 100));
+
+        setTimeout(() => {
+          if (token !== runToken) return;
+          // Replace last line state to ok (simple approach: append ok line)
+          addLogLine(step.text, "ok");
+          setProgress(Math.round(((i + 1) / total) * 100));
+          i += 1;
+          setTimeout(next, 260);
+        }, 420);
+      } else {
+        addLogLine(step.text, step.state);
+        setProgress(Math.round(((i + 1) / total) * 100));
+        i += 1;
+        setTimeout(next, 320);
+      }
+    }
+
+    next();
+  }
+
+  runBtn.addEventListener("click", () => {
+    // Allow reruns even if last run finished
+    if (isRunning) return;
+    resetUi();
+    runSimulation();
+  });
+
+  // Initial state
+  resetUi();
+}
