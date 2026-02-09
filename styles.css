@@ -35,6 +35,7 @@ html {
   --footerBg: #d4a373;        /* footer background (NEW) */
   --chipBg: rgba(28, 47, 102, 0.10);
   --shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  --hoverScale: 1.06;
 
   --cardBg: var(--surface);
   --ctaBg: var(--surface2);
@@ -123,6 +124,7 @@ html {
     --navBg: #162235;
     --chipBg: rgba(110, 168, 255, 0.16);
     --shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+    --hoverScale: 1.06;
 
     --cardBg: #22324a;
     --ctaBg: var(--surface2);
@@ -254,7 +256,7 @@ html {
 
 .navbar-nav .nav-link:hover {
   color: var(--navLinkHover); /* Change color on hover */
-  transform: scale(1.1); /* Scale effect on hover */
+  transform: scale(var(--hoverScale)); /* Scale effect on hover */
 }
 
 /* Uniform Format for buttons */
@@ -271,7 +273,7 @@ html {
 
 /* Hover effect to enlarge the buttons */
 .custom-button:hover {
-  transform: scale(1.1);
+  transform: scale(var(--hoverScale));
   color: var(--btnBg);
   background-color: var(--brandText);
   border-color: var(--btnBg);
@@ -281,6 +283,13 @@ html {
   background-color: var(--btnActiveBg) !important;
   border-color: var(--btnActiveBorder);
   color: var(--btnActiveText);
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
 }
 
 /* Custom styles for education details and background*/
@@ -326,7 +335,7 @@ html {
 }
 
 .card:hover {
-  transform: scale(1.1);
+  transform: scale(var(--hoverScale));
   /* Adjust the scale factor as needed */
 }
 
@@ -672,7 +681,7 @@ html[data-theme="dark"] .skills-legend__tag {
 
 /* Hover effect to enlarge the icons */
 .footer-icon:hover {
-  transform: scale(1.5);
+  transform: scale(var(--hoverScale));
   /* Increase the size when hovered */
 }
 
@@ -907,7 +916,7 @@ D4A373
   color: var(--toggleHoverIcon);
   background-color: var(--toggleHoverBg);
   border-color: var(--toggleBorder);
-  transform: scale(1.08);
+  transform: scale(var(--hoverScale));
   box-shadow: 0 6px 14px var(--toggleShadow);
 }
 .theme-toggle-btn:focus-visible {
