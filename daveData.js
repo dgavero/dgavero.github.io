@@ -4,17 +4,18 @@
 export const daveData = {
   technicalSkills: {
     left: [
-      { name: "SDLC", percent: 85 },
-      { name: "STLC", percent: 92 },
-      { name: "HTML / CSS / Bootstrap", percent: 77 },
-      { name: "Javascript / jQuery", percent: 75 },
-      { name: "Git", percent: 80 },
+      { name: "SDLC", level: "Expert" },
+      { name: "STLC", level: "Expert" },
+      { name: "Test Planning & Strategy", level: "Advanced" },
+      { name: "Manual Web & Mobile Testing", level: "Advanced" },
+      { name: "Git", level: "Solid" },
     ],
     right: [
-      { name: "Selenium with Python", percent: 80 },
-      { name: "Appium with Python", percent: 85 },
-      { name: "Security Testing with Python", percent: 70 },
-      { name: "Performance Testing with Python", percent: 70 },
+      { name: "Playwright (Web & API)", level: "Advanced" },
+      { name: "API Testing (REST & GraphQL)", level: "Advanced" },
+      { name: "Selenium with Python", level: "Solid" },
+      { name: "Appium with Python", level: "Solid" },
+      { name: "CI/CD Testing & Automation", level: "Good" },
     ],
   },
 

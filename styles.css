@@ -47,14 +47,7 @@ html {
   --headingAccent: #8e82fe;
   --navLinkHover: #ffffff;
   --cardHoverTitle: #0000ff;
-  --progressText: #000000;
   --progressFill: #a1cf6b;
-
-  --rerunBg: #2ea44f;
-  --rerunBorder: rgba(0, 0, 0, 0.08);
-  --rerunShadow: rgba(0, 0, 0, 0.05);
-  --rerunOutline: rgba(46, 164, 79, 0.45);
-  --rerunIcon: #ffffff;
 
   --sidebarBg: #bdbebe;
   --overlayBg: rgba(0, 0, 0, 0.5);
@@ -142,14 +135,7 @@ html {
     --headingAccent: #b6adff;
     --navLinkHover: #e5e7eb;
     --cardHoverTitle: #93c5fd;
-    --progressText: #e5e7eb;
     --progressFill: #7fcf8f;
-
-    --rerunBg: #2ea44f;
-    --rerunBorder: rgba(255, 255, 255, 0.12);
-    --rerunShadow: rgba(0, 0, 0, 0.45);
-    --rerunOutline: rgba(46, 164, 79, 0.55);
-    --rerunIcon: #ffffff;
 
     --sidebarBg: #111827;
     --overlayBg: rgba(0, 0, 0, 0.6);
@@ -208,6 +194,10 @@ html {
     --ciLogText: #e5e7eb;
     --ciSummaryBorder: rgba(148, 163, 184, 0.35);
     --ciSummaryText: #e5e7eb;
+  }
+
+  html[data-theme="dark"] .progress-bar {
+    color: #e5e7eb;
   }
 
   html[data-theme="dark"] .text-secondary {
@@ -360,27 +350,79 @@ html {
 
 .progress {
   position: relative;
-  height: 30px;
-}
-
-.percentage {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--progressText);
-  z-index: 1;
-  /* Ensures the text is on top of the progress bar */
+  height: 32px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* CSS for progress bar */
 .progress-bar {
-  background: linear-gradient(
-    to right,
-    var(--progressFill) 0%,
-    var(--progressFill) 100% /* Green: 81-100% */
-  );
+  background: var(--progressFill);
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.skill-level--expert {
+  background-color: #43a047;
+}
+
+.skill-level--advanced {
+  background-color: #81c784;
+}
+
+.skill-level--solid {
+  background-color: #dce775;
+}
+
+.skill-level--good {
+  background-color: #e6dfaf;
+}
+
+.skills-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.skills-legend--inline {
+  margin: 0.25rem 0 0;
+}
+
+.skills-legend__tag {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  color: #1f2937;
+}
+
+.skills-legend__tag--expert {
+  background-color: #43a047;
+}
+
+.skills-legend__tag--advanced {
+  background-color: #81c784;
+}
+
+.skills-legend__tag--solid {
+  background-color: #dce775;
+}
+
+.skills-legend__tag--good {
+  background-color: #e6dfaf;
+}
+
+html[data-theme="dark"] .progress-bar,
+html[data-theme="dark"] .skills-legend__tag {
+  color: #0b1220;
 }
 
 .skill p {
@@ -403,56 +445,15 @@ html {
   transform: translateY(0);
 }
 
-/* Technical Skills heading + rerun control */
+/* Technical Skills heading */
 .technical-skills-heading-wrap {
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
   margin: 1.5rem 0;
-}
-
-.technical-skills-rerun {
-  /* Small circular green play button */
-  width: 44px;
-  height: 44px;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  line-height: 1;
-
-  background-color: var(--rerunBg); /* tasteful green */
-  border: 1px solid var(--rerunBorder);
-  box-shadow: 0 1px 0 var(--rerunShadow);
-
-  cursor: pointer;
-  transition: transform 0.15s ease-in-out, filter 0.15s ease-in-out;
-}
-
-.technical-skills-rerun:hover {
-  transform: scale(1.06);
-  filter: brightness(1.02);
-}
-
-.technical-skills-rerun:active {
-  transform: scale(0.98);
-}
-
-.technical-skills-rerun:focus-visible {
-  outline: 2px solid var(--rerunOutline);
-  outline-offset: 3px;
-}
-
-.technical-skills-rerun__icon {
-  width: 0;
-  height: 0;
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
-  border-left: 10px solid var(--rerunIcon);
-  margin-left: 2px; /* visually center triangle */
 }
 
 /*  for SMALL RESOLUTION 0px to 767px*/
@@ -507,11 +508,6 @@ html {
   .technical-skills-heading-wrap {
     flex-wrap: wrap;
     gap: 8px;
-  }
-
-  .technical-skills-rerun {
-    width: 36px;
-    height: 36px;
   }
 }
 
