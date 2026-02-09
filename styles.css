@@ -328,20 +328,9 @@ html {
   }
 }
 
-/* cards animation to scale in hover*/
+/* cards */
 .card {
-  transition: transform 0.3s ease;
   cursor: default;
-}
-
-.card:hover {
-  transform: scale(var(--hoverScale));
-  /* Adjust the scale factor as needed */
-}
-
-.card:hover .card-title {
-  color: var(--cardHoverTitle);
-  /* Change to the desired color */
 }
 
 /* for progress bar style */
@@ -432,6 +421,12 @@ html {
 html[data-theme="dark"] .progress-bar,
 html[data-theme="dark"] .skills-legend__tag {
   color: #0b1220;
+}
+
+.theme-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
 }
 
 .skill p {
