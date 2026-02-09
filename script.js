@@ -444,7 +444,7 @@ function setupThemeToggle() {
   if (saved === "dark" || saved === "light") {
     apply(saved);
   } else {
-    apply(prefersDark?.matches ? "dark" : "light");
+    apply("light");
   }
 
   // Toggle on click
